@@ -1,0 +1,58 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\title{Nirdesh 2024: HackerRank Questions}
+\date{}
+\begin{document}
+\maketitle
+\begin{itemize}
+\item What’s Cooking Sunil?? \\ \\
+Sunil is working in Canteen. His boss told him to serve the foods properly to professors and students. Sunil’s tray can hold a certain number of foods at a time. Sunil checks for the order, if the order is present in his tray. He serves it immediately and gets 5 stars. If it’s not there, he have to prepare and serve it, and for that he gets 3 stars. But the problem is that, each order has a different priority. If his tray is full, he has to serve that upcoming order keeping aside the least one.
+Find how many stars Sunil would get at the end of the day. \\
+Input format: \\
+The first line contains an integer T, the no. of test cases. \\
+The second line contains an integer N, the no. of orders Sunil gets. \\
+The third line contains an integer K, the no. of orders can hold in his tray. \\
+The fourth line contains space separated characters $a_1, a_2, a_3, ... a_n$ where $a_i$ are the orders labelled as characters. \\
+The fifth line contains space separated characters $b_1, b_2, b_3 ... b_n$ where $b_i$ are the priorities of the orders of $a_1, a_2, a_3 ... a_n$  respectively labelled as characters. \\
+Output format: \\
+A single integer containing the stars Sunil would get. \\
+Sample Input 0:
+\begin{verbatim}
+1 
+8
+4
+a c a b d a e b
+1 2 1 3 4 1 5 2
+\end{verbatim}
+Sample Output 0:
+\begin{verbatim}
+30
+\end{verbatim}
+\item Mirchi's Interview Round\\
+Mohar got a interview call from Radio Mirchi. She comes for the interview at morning. But Mirchi team has something else in their mind.
+They came to know that Mohar is very weak at maths. So, they want to chance of that. Now they want to test Mohar in a different way. They gave Mohar two numbers, X and Y. Mohar has been told that she has choice token, T, whose value is initially 0. She starts to count how many ways T numbers can be chosen from X numbers. Each time she finds the number of ways, the value of token increases by 1. The token has a power that the no. of value the token holds, Y will get multiplied with the count, the no. of times the value token holds. The value of token will increase up to X.\\
+Now the Mirchi team wants know the sum of all possible counts Mohar would get.\\
+Help Mohar to crack the interview.\\
+Input Format:\\
+The first line contains an integer N, the no. of test cases.\\
+The second line two space separated integers, X and Y.\\
+Output Format:\\
+An integer.\\
+Sample Input 0:
+\begin{verbatim}
+1
+5 3
+\end{verbatim}
+Sample Output 0:
+\begin{verbatim}
+1024
+\end{verbatim}
+Explanation for Sample Output 0:\\
+The possible counts Mohar would get are 1, 15, 90, 270, 405, 243.
+
+\end{itemize}
+\end{document}
