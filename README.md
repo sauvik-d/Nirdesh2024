@@ -1,2 +1,2 @@
 # Nirdesh2024
-Annual Inter College Tech Fest of RKMVCC.
+This repo contains drafts and codes regarding Annual Inter College Tech Fest of RKMVCC.
