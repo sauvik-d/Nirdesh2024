@@ -9,10 +9,6 @@ ip.write(str(test)+'\n')
 def threat(arr, n, element, i, j):
     if i == 0 or j == 0 or i == n-1 or j == n-1:
         return False
-    left = 0
-    right  = 0
-    up = 0
-    down = 0
     # for checking total depths
     '''
     for a in range(j):
@@ -82,7 +78,7 @@ def replaceCavity(n, arr):
                         totalcavity += 1
         if flag == 0:
             cavityflag = 0
-    print("The total rounds are: "+ str(rounds-1))
+    print("The total rounds are: " + str(rounds-1))
     print("Total no. of Cavity removed is: " + str(totalcavity))
 
 for i in range(test):
