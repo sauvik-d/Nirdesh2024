@@ -71,8 +71,12 @@ int main(){
 	ULLI l = 97;
 	loop(i, 26){
 		alphabets[i] = char(l); l++;
-		if(l == 122) break;
+		if(l == 123) break;
 	}
+	loop(i, 26){
+		cout<<alphabets[i]<<" ";
+	}
+	cout<<endl;
 	vector<char> mainarray(n);
 	for(ULLI i=0;i<n;i++){
 		ULLI random = rand() % 26;
