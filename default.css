@@ -1,0 +1,313 @@
+root{
+    --bg-col: #CB9453;
+    --red-bg: #FF3023; /* Use this with 20% opacity */
+    --cream-bg: #FCC88D; /* Use this with 50% opacity */
+    --brown-bg: #EBA553; /* Use this with 50% opacity */
+    --lite-pink-bg: #FFBABA; /* Use this with 20% opacity */
+    --man-col-bg: #E8AB75; /* Use this with 100% opacity */
+}
+
+@font-face {
+    font-family: samakaran;
+    src: url(../src/SAMAN.TTF);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: #CB9453;
+}
+
+.main{
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Nav bar begin */
+.nav{
+    height: 3rem;
+    width: 100%;
+    background-color: #ffffff88;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+}
+
+.navtxt{
+    font-family: MuseoModerno;
+    font-size: 30px;
+}
+
+.menus{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (min-width: 769px) {
+    .menus{
+        margin-left: 20%;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .menus{
+        width: 40%;
+    }
+}
+
+.menus > a{
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+
+.menus > a:hover{
+    color: #BF691A;
+    font-size: 20px;
+}
+/* Nav bar end */
+
+/* banner begin */
+.banner{
+    height: 24vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner > h1{
+    font-size: 9vw;
+    font-family: samakaran;
+    color: #FAA647;
+    text-shadow: -2px 2px 0 #000,
+                2px 2px 0 #000,
+                2px -2px 0 #000,
+                -2px -2px 0 #000;
+}
+
+/* box begin */
+.box{
+    width: 70%;
+    height: 30vh;
+    padding: 2rem 4rem;
+    border-radius: 2.4vw;
+    margin-bottom: 4rem;
+    background-color: #ffffff88;
+    rotate: -2deg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 1rem #00000050;
+    animation: appear 0.2s linear;
+}
+
+.box > h3{
+    font-size: 1.3vw;
+    font-family: MuseoModerno;
+    font-weight: 400;
+    text-align: justify;
+    rotate: 2deg;
+}
+
+/* event card begin */
+.wrapper-top{
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem 0;
+}
+
+.event-card{
+    width: 16vw;
+    height: 20vw;
+    background-color: #ffffff88;
+    border-radius: 10%;
+    box-shadow: 10px 10px 1rem #00000050;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.event-card > img{
+    width: 94%;
+    margin-left: 10%;
+}
+
+.event-card > h2{
+    font-size: 2.4rem;
+    font-family: samakaran;
+    font-weight: 400;
+}
+
+.event-card > p{
+    font-size: 1.2rem;
+    font-family: MuseoModerno;
+    text-align: center;
+    margin-top: 1rem;
+    color: #737373;
+}
+
+.wrapper-bottom{
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7rem;
+}
+
+.event-card:hover{
+    top: -2rem;
+    box-shadow: 10px 2rem 1rem #00000050;
+    color: #FF3023;
+}
+
+
+/* POPUP */
+.popup .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content{
+    position: absolute;
+    top: 140%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #FAA647;
+    color: #000000;
+    width: 60vw;
+    height: auto;
+    z-index: 2;
+    text-align: center;
+    padding: 3rem;
+    box-sizing: border-box;
+    user-select: none;
+    border-radius: 2rem;
+    box-shadow: 1rem 2rem 20px #00000088;
+}
+
+.popup .content h2{
+    font-family: samakaran;
+    font-weight: 400;
+    font-size: 2.8vw;
+    margin-bottom: 1.3rem;
+}
+
+.popup .content .holder{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ffffff88;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.popup .content p{
+    font-family: MuseoModerno;
+    font-size: 1vw;
+}
+
+.popup .content .holder img{
+    width: 24vw;
+    -webkit-animation:rotate 30s infinite linear;
+    animation:rotate 30s infinite linear;
+}
+
+@keyframes rotate {
+    100% {
+      transform:rotate(-360deg);
+    }
+  }
+  @-webkit-keyframes rotate {
+    100% {
+      -webkit-transform:rotate(-360deg);
+    }
+}
+
+.popup .close-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.popup.active .overlay{
+    display: block;
+}
+
+.popup.active .content{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .navtxt {
+        font-size: 1.8rem;
+    }
+
+    .menus {
+        width: 80%;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .menus > a:hover {
+        color: #BF691A;
+        font-size: 1rem;
+    }
+
+    .banner > h1 {
+        font-size: 9vh;
+        margin-top: 4rem;
+    }
+
+    .box {
+        height: 30vw;
+    }
+
+    .popup .content {
+        top: 40%;
+    }
+}

@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#include<climits>
 #include<iostream>
 #include<fstream>
 #include<cstdlib>
@@ -7,12 +8,13 @@
 using namespace std;
 int main(){
 	srand(time(0));
-	ofstream myfile1("input8.txt");
-	ofstream myfile2("output8.txt");
-	long long int ub = 10000000, lb = 1000000;
-	long long int ubx = 15, lbx = 1;
-	long long int uby = 18, lby = 1;
-	long long int t = (rand() % (ub - lb + 1)) + lb;
+	ofstream myfile1("input.txt");
+	ofstream myfile2("output.txt");
+	long long int ub = LLONG_MAX, lb = 1;
+	long long int ubx = 10, lbx = 1;
+	long long int uby = 10, lby = 1;
+	//long long int t = (rand() % (ub - lb + 1)) + lb;
+	long long int t = 800000;
 	myfile1<<to_string(t);
 	myfile1<<"\n";
 	while(t--){

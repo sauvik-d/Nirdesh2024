@@ -1,0 +1,72 @@
+@media only screen and (max-width: 768px) {
+    .navtxt {
+        font-size: 1.8rem;
+    }
+
+    .menus {
+        width: 80%;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .menus > a:hover {
+        color: #BF691A;
+        font-size: 1rem;
+    }
+
+    .banner > h1 {
+        font-size: 9vh;
+        margin-top: 4rem;
+    }
+
+    .box {
+        height: 30vw;
+    }
+
+    .popup .content {
+        top: 40%;
+    }
+}
+
+/* @media screen and (max-width: 768px){
+    .nav{
+        height: 8vh;
+        border-radius: 0 0 6vw 6vw;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navtxt{
+        font-size: 1.8rem;
+    }
+
+    .menus{
+        width: 80%;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .menus > a:hover{
+        color: #BF691A;
+        font-size: 1rem;
+    }
+
+    .banner > h1{
+        font-size: 9vh;
+        margin-top: 4rem;
+    }
+
+    .box{
+        height: 30vw;
+    }
+
+    .popup .content{
+        top: 40%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .menus{
+        font-size: 0.8rem;
+    }
+} */

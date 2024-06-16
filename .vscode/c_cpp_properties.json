@@ -1,13 +1,20 @@
 {
     "configurations": [
         {
-            "name": "Linux",
+            "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**"
             ],
-            "defines": [],
-            "compilerPath": "/nix/store/i6zjqpawh725z1lyg3alglzlabnzbjx7-gcc-wrapper-12.3.0/bin/gcc",
-            "intelliSenseMode": "clang-x64"
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.22621.0",
+            "compilerPath": "cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64"
         }
     ],
     "version": 4

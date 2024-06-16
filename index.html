@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <title>Events - Nirdesh 2024</title>
+    <link rel="stylesheet" href="default.css">
+    <!-- <link rel="stylesheet" href="mobile.css"> -->
+    <link rel="shortcut icon" href="../src/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Author, Title, Description -->
+    <meta name="author" content="Suvam Naskar"/>
+    <meta name="description"
+          content="All events of Nirdesh 2024 tech fest."/>
+    <meta name="keywords" content="rkmvcc, rkmvcc computer science, rkmvcc techfest, rkmvcc intra college techfest, nirdesh, nirdesh 2024, nirdesh techfest"/>
+    <!-- OG Propertics -->
+    <meta property="og:site_name" content="Events - Nirdesh 2024"/>
+    <meta property="og:title" content="Events - Nirdesh 2024"/>
+    <meta property="og:description"
+          content="All events of Nirdesh 2024."/>
+    <meta property="og:url" content="https://nirdesh.co.in/events/"/>
+    <meta property="og:type" content="website"/>
+</head>
+<body>
+    <div class="main">
+        <nav class="nav">
+            <div>
+                <p class="navtxt">NIRDESH 2024</p>
+            </div>
+            <div class="menus">
+                <a href="../" class="menu">HOME</a>
+                <a href="../schedule/" class="menu">SCHEDULE</a>
+                <a href="../<?php
+                        session_start();
+                        if(isset($_SESSION["user"]))
+                        echo "account";
+                        else
+                        echo "signup";
+                    ?>/" class="menu">
+                <?php
+                        if(isset($_SESSION["user"]))
+                            echo "ACCOUNT";
+                        else
+                            echo "SIGNUP/ LOGIN";
+                    ?>
+                </a>
+            </div>
+        </nav>
+        <div class="banner">
+            <h1>events</h1>
+        </div>
+
+        <div class="box">
+            <h3>Unleash your tech skills and creativity at NIRDESH 2024! Dive into coding challenges, untangle mysteries, showcase your design flair in the Wallpaper Design contest, and battle it out in Chess and Quizzes. We have events for all levels, from beginner to pro. Hone your skills, network with fellow tech enthusiasts, and win exciting prizes! Don't miss out - register now!</h3>
+        </div>
+
+        <div class="wrapper-top">
+            <div class="event-card" onclick="yuktikala()">
+                <img src="./src/yuktikala.png" alt="Yuktikala image">
+                <h2>Yuktikala</h2>
+                <p>Coding competition with two levels.</p>
+            </div>
+            <div class="event-card" onclick="rahasyabhedi()">
+                <img src="./src/rahasyabhedi.png" alt="Rahasyabhedi image">
+                <h2>Rahasyabhedi</h2>
+                <p>Mystery Solving competition with two levels.</p>
+            </div>
+            <div class="event-card" onclick="prasnottari()">
+                <img src="./src/prasnottari.png" alt="Prasnottari image">
+                <h2>Prasnottari</h2>
+                <p>Quiz competition with two levels.</p>
+            </div>
+            <div class="event-card" onclick="chaturanga()">
+                <img src="./src/chaturanga.png" alt="Chaturanga image">
+                <h2>Chaturanga</h2>
+                <p>Chess competition.</p>
+            </div>
+        </div>
+
+        <div class="wrapper-bottom">
+            <div class="event-card" onclick="vittichitran()">
+                <img src="./src/vittichitran.png" alt="Vittichitran image">
+                <h2>Vittichitran</h2>
+                <p>Illustrate your ideas on digital platform.</p>
+            </div>
+            <div class="event-card">
+                <img src="./src/paribhramti.png" alt="Paribhramti image">
+                <h2>Paribhramti</h2>
+                <p>Rubik's cube competition with two levels.</p>
+            </div>
+            <div class="event-card">
+                <img src="./src/yuktikala.png" alt="Sankhyakriti image">
+                <h2>Sankhyakriti</h2>
+                <p>Sudoku competition.</p>
+            </div>
+            <div class="event-card">
+                <img src="./src/yuktikala.png" alt="Dandamanav image">
+                <h2>Dandamanav</h2>
+                <p>Stickman gaming competition.</p>
+            </div>
+        </div>
+
+        <div class="popup" id="yuktikala">
+            <div class="overlay" onclick="yuktikala()"></div>
+            <div class="content">
+                <div class="close-btn" onclick="yuktikala()">&times;</div>
+                <h2>Yuktikala</h2>
+                <div class="holder">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam voluptas harum modi quaerat cum rem ex at sapiente minima, dolores tempore natus. Hic repellendus rerum esse odio voluptate nihil illo!</p>
+                    <img src="../src/banner-art.png" alt="Nirdesh Art">
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="rahasyabhedi">
+            <div class="overlay" onclick="rahasyabhedi()"></div>
+            <div class="content">
+                <div class="close-btn" onclick="rahasyabhedi()">&times;</div>
+                <h2>rahasyabhedi</h2>
+                <div class="holder">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam voluptas harum modi quaerat cum rem ex at sapiente minima, dolores tempore natus. Hic repellendus rerum esse odio voluptate nihil illo!</p>
+                    <img src="../src/banner-art.png" alt="Nirdesh Art">
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="prasnottari">
+            <div class="overlay" onclick="prasnottari()"></div>
+            <div class="content">
+                <div class="close-btn" onclick="prasnottari()">&times;</div>
+                <h2>Prasnottari</h2>
+                <div class="holder">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam voluptas harum modi quaerat cum rem ex at sapiente minima, dolores tempore natus. Hic repellendus rerum esse odio voluptate nihil illo!</p>
+                    <img src="../src/banner-art.png" alt="Nirdesh Art">
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="chaturanga">
+            <div class="overlay" onclick="chaturanga()"></div>
+            <div class="content">
+                <div class="close-btn" onclick="chaturanga()">&times;</div>
+                <h2>Chaturanga</h2>
+                <div class="holder">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam voluptas harum modi quaerat cum rem ex at sapiente minima, dolores tempore natus. Hic repellendus rerum esse odio voluptate nihil illo!</p>
+                    <img src="../src/banner-art.png" alt="Nirdesh Art">
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="vittichitran">
+            <div class="overlay" onclick="vittichitran()"></div>
+            <div class="content">
+                <div class="close-btn" onclick="vittichitran()">&times;</div>
+                <h2>Vittichitran</h2>
+                <div class="holder">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam voluptas harum modi quaerat cum rem ex at sapiente minima, dolores tempore natus. Hic repellendus rerum esse odio voluptate nihil illo!</p>
+                    <img src="../src/banner-art.png" alt="Nirdesh Art">
+                </div>
+                <a href="./vittichitran/">Register</a>
+            </div>
+        </div>
+
+    </div>
+    <!-- Footer -->
+    <?php
+        include('../snippets/footer.php');
+    ?>
+
+    <script src="action.js"></script>
+</body>
+</html>
