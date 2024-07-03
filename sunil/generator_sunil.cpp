@@ -26,12 +26,12 @@ void func(vector<char> mainarray, vector<char> priorarray, vector<ULLI> priority
 	ULLI sum = 0;
 	loop(i, mainarray.size()){
 		if(find(v1.begin(), v1.end(), mainarray[i]) != v1.end()){ // if the element is present in array
-			sum += 5;
+			sum += 3;
 		}
 		else{ // if the element is not present in array
 			if(v1.size() < k){ // if array is not full then insert
 				v1.push_back(mainarray[i]);
-				sum += 3;
+				sum += 5;
 			}
 			else{ // if the array is full then omit the element with least priority
 				ULLI mx = 0;
@@ -48,7 +48,7 @@ void func(vector<char> mainarray, vector<char> priorarray, vector<ULLI> priority
             			}
         			}
     			}
-				sum += 3;
+				sum += 5;
 			}
 		}
 	}
@@ -62,9 +62,10 @@ int main(){
 	ULLI input;
 	//cin>>input;
 	ULLI test = (rand() % (1-1+1)) + 1;
-	cout<<test<<endl;
-	ULLI n = (rand() % (10-1+1))+1;
-	ULLI k = rand() % n + 1;
+	//cout<<test<<endl;
+	//ULLI n = (rand() % (10-1+1))+1;
+	//ULLI k = rand() % n + 1;
+	ULLI n = 5, k = 2;
 	cout<<"Size of the frame is: "<<k<<endl;
 	vector<char> alphabets(26);
 	//= {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
@@ -73,10 +74,12 @@ int main(){
 		alphabets[i] = char(l); l++;
 		if(l == 123) break;
 	}
+	/*
 	loop(i, 26){
 		cout<<alphabets[i]<<" ";
 	}
-	cout<<endl;
+	*/
+	//cout<<endl;
 	vector<char> mainarray(n);
 	for(ULLI i=0;i<n;i++){
 		ULLI random = rand() % 26;
@@ -93,13 +96,13 @@ int main(){
 	loop(i, n) cout<<dupliarray[i]<<" ";
 	cout<<endl;
 	loop(i, n-1){ // extracting the unique characters from the given input sequence
-		if(mainarray[i] != mainarray[i+1]){
-			priorarray.push_back(mainarray[i]);
+		if(dupliarray[i] != dupliarray[i+1]){
+			priorarray.push_back(dupliarray[i]);
 		}
 	}
-	priorarray.push_back(mainarray[n-1]);
+	priorarray.push_back(dupliarray[n-1]);
 	cout<<"Array with unique elements is:"<<endl; 
-	loop(i, n) cout<<priorarray[i]<<" "; 
+	loop(i, priorarray.size()) cout<<priorarray[i]<<" "; 
 	cout<<endl;
 	srand(time(0));
 	vector<ULLI> priority; //contains the priorities of different elements
