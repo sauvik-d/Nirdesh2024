@@ -8,8 +8,8 @@
 using namespace std;
 int main(){
     srand(time(0));
-    ofstream myfile1("input1.txt");
-    ofstream myfile2("output1.txt");
+    ofstream myfile1("input10.txt");
+    ofstream myfile2("output10.txt");
     int test = rand() % 1 + 1;
     while(test--){
         int n = rand() % 10 + 1;
@@ -26,7 +26,7 @@ int main(){
             myfile1<<to_string(v1[i])+"\n";
         }
         //int v1[7] = {1, 15, 7, 9, 2, 5, 10};
-        vector<int> dp(7, -1);
+        vector<int> dp(n, -1);
         for(int i=0;i<n;i++){
             int cur = v1[i];
             for(int j=i;j>=(i-k+1) && ~j;j--) {

@@ -1,9 +1,9 @@
 import random
 
-test = random.randint(1, 10)
+test = random.randint(1, 100)
 print("No. of tests are: "+str(test))
-ip = open("input.txt", "w")
-op = open("output.txt", "w")
+ip = open("input09.txt", "w")
+op = open("output09.txt", "w")
 ip.write(str(test)+'\n')
 
 def threat(arr, n, element, i, j):
@@ -44,11 +44,13 @@ def func(n):
         for j in range(n):
             ip.write(str(arr[i][j])+" ")
         ip.write("\n")
-    ip.write("\n")
     replaceCavity(n, arr)
     # print("After removing cavity: ")
-    # for i in range(n):
-        # print(arr[i])
+    for i in range(n):
+        for j in range(n):
+            op.write(str(arr[i][j])+" ")
+        op.write("\n")
+
 
 '''
 def cavity(n, arr):
@@ -83,7 +85,7 @@ def replaceCavity(n, arr):
 
 for i in range(test):
     print("Result at Test "+str(i+1)+":")
-    n = random.randint(50, 100)
+    n = random.randint(1, 100)
     # n = 100
     # print(rounds)
     ip.write(str(n)+'\n')
