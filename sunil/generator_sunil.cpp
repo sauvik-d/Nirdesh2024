@@ -59,8 +59,8 @@ ULLI func(vector<char> mainarray, vector<char> priorarray, vector<ULLI> priority
 }
 int main(){
 	srand(time(0));
-	ofstream myfile1("input01.txt");
-	ofstream myfile2("output01.txt");
+	ofstream myfile1("input06.txt");
+	ofstream myfile2("output06.txt");
 	ULLI input;
 	//cin>>input;
 	ULLI test = (rand() % (1-1+1)) + 1;
@@ -68,7 +68,9 @@ int main(){
 	//ULLI n = (rand() % (10-1+1))+1;
 	//ULLI k = rand() % n + 1;
 	ULLI n = (rand() % 10000) + 1;
+	myfile1<<to_string(n)<<" ";
 	ULLI k = (rand() % n) + 1;
+	myfile1<<to_string(k)<<endl;
 	cout<<"Size of the frame is: "<<k<<endl;
 	vector<char> alphabets(26);
 	//= {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
