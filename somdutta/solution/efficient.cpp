@@ -1,19 +1,14 @@
-#include <cmath>
-#include <cstdio>
-#include <vector>
-#include <iostream>
-#include <algorithm>
-using namespace std;
-
+#include<stdio.h>
+#include<math.h>
 // use runtime 2 second
 int main() {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     long long int t;
-    cin>>t;
+    scanf("%lld", &t);
     while(t--){
         long x, y;
-        cin>>x>>y;
-        cout<<long(pow(y+1, x))<<endl;
+        scanf("%ld %ld", &x, &y)
+        printf("%ld", long(pow(y+1, x)));
     }
     return 0;
 }
